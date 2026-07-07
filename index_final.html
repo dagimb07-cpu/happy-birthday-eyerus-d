@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>For Eyerus ❤️</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;overflow:hidden}
+.page{display:none;height:100vh;background-size:cover;background-position:center;align-items:center;justify-content:center;padding:20px}
+.active{display:flex}
+.card{max-width:650px;width:100%;background:rgba(0,0,0,.58);backdrop-filter:blur(8px);color:#fff;padding:24px;border-radius:18px;text-align:center}
+button{padding:12px 22px;border:0;border-radius:30px;margin:8px;font-size:16px;cursor:pointer}
+.y{background:#e53935;color:#fff}.n{background:#fff;color:#e53935}.p{background:#ff4d6d;color:#fff}
+#p1{background-image:url('https://images.unsplash.com/photo-1518895949257-7621c3c786d7?auto=format&fit=crop&w=1200&q=80')}
+#p2{background-image:url('https://images.unsplash.com/photo-1519052537078-e6302a4968d4?auto=format&fit=crop&w=1200&q=80')}
+#p3{background-image:url('https://images.unsplash.com/photo-1511381939415-e44015466834?auto=format&fit=crop&w=1200&q=80')}
+#p4{background:linear-gradient(#540000,#210000);position:relative}
+.balloon{position:absolute;font-size:34px;animation:up 10s linear infinite}
+@keyframes up{from{transform:translateY(110vh)}to{transform:translateY(-20vh)}}
+.conf{position:absolute;width:8px;height:8px;animation:fall 4s linear forwards}
+@keyframes fall{from{transform:translateY(-10vh)}to{transform:translateY(110vh) rotate(360deg)}}
+pre{white-space:pre-wrap;text-align:left}
+</style>
+</head>
+<body>
+<audio id="bgm" autoplay loop>
+<source src="eyob_mekonnen__debzzesh__lyrics_________________እዮብ_መኮንን__ደብዝዘሽ__(256k).mp3" type="audio/mpeg">
+</audio>
+<div id="p1" class="page active"><div class="card">
+<h1>❤️ Birthday Surprise</h1><h2>First Question (1/4)</h1><p>Before we celebrate your birthday...<br><br><b>Are you still mad at me?</b><br><br><small>🎁 There are 4 pages in this surprise. Please read them all ❤️</small></p>
+<button class="y" onclick="reply(true)">😤 Yes</button><button class="n" onclick="reply(false)">😊 No</button>
+<p id="r"></p></div></div>
+
+<div id="p2" class="page"><div class="card">
+<h1>📖 Page 2 of 4</h1>
+<p><b>Proverbs 17:9</b><br><br>"Any relationship that lasts needs forgiveness. We are all imperfect human beings, and eventually, we will run into misunderstandings even with those we love. We will hurt each other, and others will hurt us. But if you can forgive a fault, love can be restored." </p>
+<button class="p" onclick="show(3)">Next Page ❤️</button></div></div>
+
+<div id="p3" class="page"><div class="card">
+<h1>💌 Page 3 of 4</h1>
+<p>Qetayin kemayetish befit gin endetaqilign yemifeligew neger binor.<br><br>Anchin lemaskefatm hone lemaskeyem biye yaderkew neger yelem. ❤️<br><br>Please tap below... I saved the best for last. 🥺✨</p>
+<button class="p" onclick="show(4);confetti();">🎁 Open the Final Surprise ❤️</button></div></div>
+
+<div id="p4" class="page">
+<div class="card">
+<h1>🎉 Happy Birthday Eyerus 🎉</h1>
+<pre>Selam Eyerus endet nesh?
+Zare leanchi liyo ken new.
+Ene huleme destegna honesh mayet new yemefeligew mikiniyatu anchi tiru sew nesh.
+Lezame new ehan yelakulesh.
+Yalefewen negere yikir tebablen entarek ena hulunim negere endadis enjemer.
+Yawu qalum ende milaw "yebedelu wachihu yikir belu" aydelem yemilaw?
+Beka hulunem teten endebefitchachen enhun.
+Melkam lidet ❤️</pre>
+<h1>🎂</h1>
+<p>Thank you for reading ❤️<br>God bless you. Happy Birthday!</p>
+</div>
+</div>
+
+<script>
+function show(n){document.querySelectorAll('.page').forEach(x=>x.classList.remove('active'));document.getElementById('p'+n).classList.add('active');if(n==4){for(let i=0;i<20;i++){let b=document.createElement('div');b.className='balloon';b.textContent='❤️';b.style.left=Math.random()*100+'vw';b.style.animationDuration=(6+Math.random()*5)+'s';document.getElementById('p4').appendChild(b);}}}
+function reply(y){let a=document.getElementById('bgm');if(a)a.play().catch(()=>{});document.getElementById('r').innerHTML=y?"😂 That's okay... I deserve that. But today isn't about us arguing... it's your birthday. ❤️":"I knew your heart was kind. ❤️";setTimeout(()=>show(2),1800);}
+function confetti(){for(let i=0;i<80;i++){let c=document.createElement('div');c.className='conf';c.style.left=Math.random()*100+'vw';c.style.background=['#fff','#ff4d6d','#ffd54f'][Math.floor(Math.random()*3)];document.body.appendChild(c);setTimeout(()=>c.remove(),4500);}}
+</script>
+</body></html>
